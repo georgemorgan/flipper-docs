@@ -1,10 +1,14 @@
-led
-===
+---
+title: LED
+---
+
+## led
 
 > The `led` module handles all user interaction with the RGB LED that
 > can be found at the top of your device.
 
 This module contains the following functions:
+
 - [configure](#configure)
 - [rgb](#rgb)
 
@@ -19,6 +23,7 @@ user applications.
 ```c
 led.configure()
 ```
+
 > **returns**: `int` representing the success of the operation.
 > - `lf_success` when configuration succeeded.
 > - `lf_error` when configuration failed.
@@ -37,6 +42,7 @@ The `rgb` function sets the LED color.
 ```c
 led.rgb(uint8_t r, uint8_t g, uint8_t b)
 ```
+
 > **returns**: nothing
 
 > **parameters**:
@@ -47,6 +53,7 @@ led.rgb(uint8_t r, uint8_t g, uint8_t b)
 > ⚠️ **Note:** All parameters to `rgb` must be within the range **0** to **255**.
 
 **console syntax**
+
 ```
 $ flipper led rgb [red] [green] [blue]
 ```

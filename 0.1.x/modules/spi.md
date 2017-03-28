@@ -1,1 +1,5 @@
-# spi
+---
+title: SPI
+---
+
+## spi
