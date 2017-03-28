@@ -1,30 +1,11 @@
 # Flipper Documentation
 
-> ⚠️ **Warning:** [Rust] must be installed prior to building the documentation.
+The Flipper Docs are a collection of resources for teaching developers how to
+build projects using Flipper and its tools.
 
-This documentation uses [mdBook] as the static site generator. To install it:
-
-[Rust]: https://www.rust-lang.org/en-US/
-[mdBook]: https://github.com/azerupi/mdBook
-
-```
-$ cargo install mdbook
-```
-
-## Building
-
-To build the documentation:
-
-```
-$ mdbook build
-```
-
-## Live Testing
-
-To test the documentation:
-
-```
-$ mdbook serve
-```
-
-This will serve the documentation live on `localhost:3000`.
+The docs are hosted on [Flipper's website](flipper.io/docs/). They're included
+as a git submodule of the
+[website repository](github.com/georgemorgan/flipper-website) and built using
+the site's jekyll setup. Thus, all of the docs pages must include a
+[YAML front matter](https://jekyllrb.com/docs/frontmatter/) with a `title`
+attribute in order to be processed by jekyll and served with the site.
