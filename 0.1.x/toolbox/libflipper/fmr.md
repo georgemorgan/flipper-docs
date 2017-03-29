@@ -8,7 +8,7 @@ The Flipper Message Runtime, or **FMR** for short, is the component of
 `libflipper` that makes all of the magic happen. The message runtime is
 responsible for transferring information about how to invoke functions, transfer
 data, load modules, launch applications, and more to the device attached to the
-current instance of [libflipper](./).
+current instance of [libflipper]().
 
 ---
 
