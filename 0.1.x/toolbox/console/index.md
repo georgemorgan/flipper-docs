@@ -1,8 +1,8 @@
 ---
-title: Console
+title: Flipper Console
 ---
 
-## Console
+## Flipper Console
 
 The Flipper Console, or **console** for short, is a command line utility that is
 installed alongside the toolbox. The console makes it easy to interact with the
