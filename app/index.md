@@ -16,8 +16,8 @@ bindings that can be used to control any of the device's peripherals, straight
 out of the box. Any of the library functions, when called, will have an
 immediate effect on the attached device's hardware. Get started by turing on an
 LED with 2 lines of code in your favorite language
-[here](./getting-started), or learn how to do it in a single command using the
-console [here](./getting-started#console).
+[here](), or learn how to do it in a single command using the
+console [here](#console).
 
 Continue reading to learn more about how everything works. Alternatively, you
 can jump to the introductory section that most piques your interest using the

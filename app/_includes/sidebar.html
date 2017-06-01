@@ -1,0 +1,32 @@
+<aside class="page-navigation">
+  {% assign docs_url = '/docs/' | append: page.flipper_version %}
+
+  <!-- Populated by _plugins/versions.rb. See https://jekyllrb.com/docs/plugins/ -->
+  {% for nav in page.nav_items %}
+  <nav>
+    {% if nav.url %}
+    <a href="{{docs_url | append: nav.url}}"><h5>{{nav.title}}</h5></a>
+    {% else %}
+    <h5>{{nav.title}}</h5>
+    {% endif %}
+    <ul>
+      {% for item in nav.items %}
+      {% capture url %}{{ docs_url | append: item.url }}/{% endcapture %}
+      <li>
+        <a href="{{docs_url | append: item.url}}" {% if page.url == url %}class="active"{% endif %}>{{item.text}}</a>
+        {% if item.items %}
+        <ul>
+          {% for subitem in item.items %}
+          {% capture sub_url %}{{ docs_url | append: subitem.url }}/{% endcapture %}
+          <li>
+            <a href="{{docs_url | append: subitem.url}}" {% if page.url == sub_url %}class="active"{% endif %}>{{subitem.text}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endfor %}
+</aside>

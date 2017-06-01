@@ -1,0 +1,89 @@
+- title: Getting Started
+  url: /getting-started/
+  items:
+    - text: Installing the Flipper Toolbox
+      url: /getting-started/install
+    - text: First time setup
+      url: /getting-started/setup
+    - text: Controlling Flipper
+      url: /getting-started/first-time-control
+    - text: First Application
+      url: /getting-started/first-application
+    - text: First Module
+      url: /getting-started/first-module
+    - text: First Language Standard Module
+      url: /getting-started/first-language
+    - text: First Language User Module
+      url: /getting-started/first-module-language
+- title: Toolbox
+  url: /toolbox/
+  items:
+    - text: Console
+      url: /toolbox/console/
+    - text: Dashboard
+      url: /toolbox/dashboard/
+    - text: LibFlipper
+      url: /toolbox/libflipper/
+      items:
+        - text: Application Binary Interface
+          url: /toolbox/libflipper/abi
+        - text: Flipper Message Runtime
+          url: /toolbox/libflipper/fmr
+        - text: Error Handling
+          url: /toolbox/libflipper/errors
+        - text: Endpoints
+          url: /toolbox/libflipper/endpoints
+        - text: Modules
+          url: /toolbox/libflipper/modules
+- title: Languages
+  url: /languages/
+  items:
+    - text: C
+      url: /languages/c
+    - text: C++
+      url: /languages/cpp
+    - text: Objective C
+      url: /languages/objective-c
+    - text: Swift
+      url: /languages/swift
+    - text: Java
+      url: /languages/java
+    - text: Python
+      url: /languages/python
+    - text: Javascript
+      url: /languages/javascript
+    - text: Rust
+      url: /languages/rust
+    - text: Haskell
+      url: /languages/haskell
+- title: Standard Modules
+  url: /modules/
+  items:
+    - text: ADC
+      url: /modules/adc
+    - text: Button
+      url: /modules/button
+    - text: DAC
+      url: /modules/dac
+    - text: Filesystem
+      url: /modules/fs
+    - text: GPIO
+      url: /modules/gpio
+    - text: I2C
+      url: /modules/i2c
+    - text: LED
+      url: /modules/led
+    - text: PWM
+      url: /modules/pwm
+    - text: RTC
+      url: /modules/rtc
+    - text: SWD
+      url: /modules/swd
+    - text: Temperature
+      url: /modules/temp
+    - text: Timer
+      url: /modules/timer
+    - text: USB
+      url: /modules/usb
+    - text: WDT
+      url: /modules/wdt

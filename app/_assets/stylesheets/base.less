@@ -1,0 +1,252 @@
+// Skeleton overrides
+// -------------------------
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: @family-whitney-ss, @family-default;
+  font-size: 14px;
+  color: @font-color;
+  -webkit-font-smoothing: antialiased;
+
+  .container {
+    max-width: 1020px;
+  }
+
+  @media (min-width: @navbar-collapse-point) {
+    padding-top: @navbar-height;
+  }
+}
+
+:target:before {
+  display: block;
+  content: "";
+  height: 136px;
+  margin: -136px 0 0;
+}
+
+.no-subscribe-section {
+  margin-bottom: 51px;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  border: 0 none;
+  padding: 1px 14px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  background-color: @clr-green;
+  background-image: linear-gradient(to bottom, #29af65, #20a659);
+  box-shadow: inset 0 -1px 0 #177942;
+
+  &:hover {
+    background-image: linear-gradient(to bottom, #16a257, #0c8d41);
+    box-shadow: inset 0 -1px 0 #096830;
+  }
+
+  &:active {
+    background-image: linear-gradient(to bottom, #0c803c, #149651);
+    box-shadow: inset 0 1px 0 #085e2c;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border-radius: 3px;
+  letter-spacing: 0;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 13px;
+  color: @clr-blue;
+  border-color: #bae2cc;
+  height: 36px;
+  line-height: 35px;
+  padding: 0 13px;
+  margin: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: @clr-blue;
+    border-color: lighten(@clr-blue, 40%);
+  }
+
+  &:hover {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .15), rgba(189, 230, 207, .15));
+  }
+
+  &:active {
+    background: #e8f8ee;
+  }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  font-family: @family-whitney-ss;
+  border-radius: 3px;
+  border-color: #ced2d6;
+  box-shadow: inset 1px 2px 0 0 rgba(242, 242, 242, .5);
+  height: 36px;
+  font-size: 13px;
+
+  &:focus {
+    border: 1px solid lighten(@clr-blue, 30%);
+    outline: 0;
+  }
+}
+
+.column,
+.columns {
+  margin-bottom: 3rem;
+
+  @media (min-width: 550px) {
+    margin-bottom: 0;
+  }
+}
+
+.button-large {
+  font-size: 16px;
+  line-height: 42px;
+  height: 44px;
+}
+
+.button-dark {
+  background: @clr-indigo;
+  border-color: @clr-indigo;
+  color: #fff;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    border-color: lighten(@clr-indigo, 5%);
+    background: lighten(@clr-indigo, 5%);
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+code {
+  padding: 4px;
+  color: @clr-red;
+  font-size: 100%;
+  background-color: #fff2f2;
+  border-radius: 3px;
+  border: 0 none;
+  margin: 0;
+  font-family: @family-code;
+}
+
+a {
+  color: @clr-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: @clr-blue - 30%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  letter-spacing: 0;
+  color: #262e33;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 33px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: @family-whitney-ss-sc;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+figure {
+  margin: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+ul {
+  padding-left: 1.2em;
+  list-style-position: outside;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    color: @clr-grey-700;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all .2s linear;
+
+    &:hover {
+      color: #2c3033;
+    }
+
+    &:active,
+    &.active {
+      color: @clr-blue;
+    }
+  }
+}

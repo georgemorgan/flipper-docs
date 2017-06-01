@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="navbar">
+    <div class="container">
+      <nav id="navbar" class="navbar-nav">
+        <ul>
+          <li><a href="/" {% if page.url == "/" %} class="active"{% endif %}>Overview</a></li>
+          <li><a href="/languages/" {% if page.url contains "/languages/" %} class="active"{% endif %}>Languages</a></li>
+          <li><a href="/toolbox/" {% if page.url contains "/toolbox/" %} class="active"{% endif %}>Toolbox</a></li>
+          <li><a href="/docs/" {% if page.url contains "/docs/" %} class="active"{% endif %}>Docs</a></li>
+          <li><a href="/install/" {% if page.url == "/install/" %} class="active"{% endif %}>Install</a></li>
+          <li><a href="/preorder/" class="{% if page.url == "/preorder/" %} class="active "{% endif %}success">Preorder</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div><!-- .navbar -->
+</header>

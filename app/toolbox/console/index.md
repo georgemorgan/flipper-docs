@@ -146,4 +146,4 @@ You can then resume executing commands normally without needing to type
 
 The Flipper Package Manager is integrated into the console. To learn how to
 create, deploy, and distribute packages for your device, check out the
-[package manager](../package-manager/).
+[package manager](../package-manager).

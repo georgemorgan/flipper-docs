@@ -1,2 +1,19 @@
 .DS_Store
-book
+.vagrant
+.buildpath
+.project
+.bundle
+.idea
+.ruby-version
+.ruby-gemset
+*.log
+
+# jekyll
+Gemfile.lock
+dist
+
+# deploy
+.gh-pages
+
+# package managers
+node_modules

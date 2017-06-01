@@ -1,0 +1,66 @@
+# Build settings
+source: app
+destination: dist
+permalink: pretty
+timezone: America/San_Francisco
+markdown: kramdown
+
+keep_files:
+  - assets
+
+# Site settings
+name: Flipper
+title: A new paradigm for embedded development.
+description: "Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."
+#documentation: docs Removed since entire site is docs.
+links:
+  web: https://getkong.org
+  share: http://getkong.org # legacy link, must maintain for social sharing counters
+  download: https://github.com/Mashape/kong/releases/download
+  instaclustr: "https://www.instaclustr.com/products/kong/?utm_source=partnership&utm_medium=link&utm_campaign=mashape"
+repos:
+  flipper: https://github.com/georgemorgan/flipper
+  docs: https://github.com/georgemorgan/flipper-docs
+
+gems:
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: 'page'
+
+  - scope:
+      path: 'install'
+    values:
+      layout: 'install'
+
+  - scope:
+      path: 'docs'
+    values:
+      layout: 'docs'
+
+  - scope:
+      path: 'about'
+    values:
+      layout: 'about'
+      header_html: '<a class="github-button" href="https://github.com/Mashape/kong" data-style="mega" data-count-href="/Mashape/kong/stargazers" data-count-api="/repos/Mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star Mashape/kong on GitHub">Star</a>&nbsp;<a class="github-button" href="https://github.com/Mashape/kong/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/Mashape/kong/network" data-count-api="/repos/Mashape/kong#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork Mashape/kong on GitHub">Fork</a>'
+      breadcrumbs:
+        About: /about
+
+  - scope:
+      path: 'plugins'
+    values:
+      layout: 'plugin'
+      header_btn_text: Report Bug
+      header_btn_href: https://github.com/Mashape/kong/issues/new
+      header_btn_target: _blank
+      id: page-plugin
+      breadcrumbs:
+        Plugins: /plugins
+      nav:
+        - label: Getting Started
+          items:
+            - label: Installation
+            - label: Configuration

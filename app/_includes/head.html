@@ -1,0 +1,69 @@
+{% capture page_title %}{{ page.title | escape }}{% if page.flipper_version %} - v{{ page.flipper_version | escape }}{% endif %}{% if page.title %} | {% endif %}{% endcapture %}
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>{{ page_title }}{{ site.name }} - {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="Flipper"/>
+  <meta property="og:title" content="{{ site.title }}"/>
+  <meta property="og:site_name" content="{{ site.name }}"/>
+  <!-- use share link for facebook -->
+  <meta property="og:url" content="{{ site.links.share }}"/>
+  <meta property="og:description" content="{{ site.description }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:image" content="{{ site.links.web }}/assets/images/share.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@mashape"/>
+  <meta name="twitter:creator" content="@mashape"/>
+  <meta name="twitter:url" content="{{ site.links.web }}"/>
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.links.web }}/assets/images/share.png">
+  <meta property="fb:admins" content="227304446"/>
+  <meta property="fb:admins" content="576641408"/>
+  <meta name="google-site-verification" content="CrU3zp02dNKTe8NSAipL4NCPkrIjDXG8fViTZ-MIzP4"/>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Mashape",
+      "url": "{{site.links.web}}",
+      "logo": "{{site.links.web}}/assets/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/Mashape",
+        "https://twitter.com/mashape",
+        "https://plus.google.com/+mashape"
+      ]
+    }
+  </script>
+
+  <!-- Preload assets -->
+  <link rel="dns-prefetch" href="//cloud.typography.com">
+  <link rel="dns-prefetch" href="//dev.visualwebsiteoptimizer.com">
+  <link rel="dns-prefetch" href="//cdn.segment.com">
+  <link rel="dns-prefetch" href="//sidecar.gitter.im">
+  <link rel="dns-prefetch" href="//buttons.github.io">
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/styles.css?v={{ site.time | date: '%s' }}"/>
+
+  <!-- Web Fonts -->
+  <script>
+  WebFontConfig = {
+    custom: {
+      families: ['Whitney A', 'Whitney B', 'Whitney SSm A', 'Whitney SSm B', 'Whitney SSm Smallcaps A', 'Whitney SSm Smallcaps B'],
+      urls: ['//cloud.typography.com/7506032/804186/css/fonts.css']
+    }
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+  </script>
+</head>

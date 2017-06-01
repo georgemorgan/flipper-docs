@@ -1,0 +1,91 @@
+---
+layout: default
+sitemap: true
+id: documentation
+---
+
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-icon">
+      <img src="/assets/images/icons/icn-documentation.svg" alt="Documentation" />
+    </div>
+    <div class="page-header-title">
+      <h1>Documentation ({{page.flipper_version}})</h1>
+      <p>Learn how Kong empowers your APIs</p>
+    </div>
+
+    {% if site.data.flipper_versions.size > 1 %}
+      <div class="dropdown page-header-right">
+        <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Version {{page.flipper_version}}
+          {% if page.flipper_version == site.data.flipper_latest.release %}<em>(latest)</em>{% endif %}
+          <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="version-dropdown">
+          {% for ver in site.data.flipper_versions %}
+            {% unless page.flipper_version == ver.release %}
+              <li>
+                <a href="/docs/{{ver.release}}"{% if ver.release == page.flipper_version %} class="active"{% endif %}>
+                  {{ver.release}}
+                  {% if ver.release == site.data.flipper_latest.release %}(latest){% endif %}
+                </a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</header>
+
+<div class="container">
+  <!--<aside class="page-navigation">-->
+    <!--{% assign docs_url = '/docs/' | append: page.flipper_version %}-->
+
+    <!--&lt;!&ndash; Populated by _plugins/versions.rb. See https://jekyllrb.com/docs/plugins/ &ndash;&gt;-->
+    <!--{% for nav in page.nav_items %}-->
+    <!--<nav>-->
+      <!--{% if nav.url %}-->
+      <!--<a href="{{docs_url | append: nav.url}}"><h5>{{nav.title}}</h5></a>-->
+      <!--{% else %}-->
+      <!--<h5>{{nav.title}}</h5>-->
+      <!--{% endif %}-->
+      <!--<ul>-->
+        <!--{% for item in nav.items %}-->
+        <!--{% capture url %}{{ docs_url | append: item.url }}/{% endcapture %}-->
+        <!--<li>-->
+          <!--<a href="{{docs_url | append: item.url}}" {% if page.url == url %}class="active"{% endif %}>{{item.text}}</a>-->
+          <!--{% if item.items %}-->
+          <!--<ul>-->
+            <!--{% for subitem in item.items %}-->
+            <!--{% capture sub_url %}{{ docs_url | append: subitem.url }}/{% endcapture %}-->
+            <!--<li>-->
+              <!--<a href="{{docs_url | append: subitem.url}}" {% if page.url == sub_url %}class="active"{% endif %}>{{subitem.text}}</a>-->
+            <!--</li>-->
+            <!--{% endfor %}-->
+          <!--</ul>-->
+          <!--{% endif %}-->
+        <!--</li>-->
+        <!--{% endfor %}-->
+      <!--</ul>-->
+    <!--</nav>-->
+    <!--{% endfor %}-->
+  <!--</aside>-->
+
+  {% include sidebar.html %}
+
+  <div class="page-content-container">
+    <div class="page-content">
+      <div class="content">
+        {% if page.flipper_version != site.data.flipper_latest.release %}
+        <div class="alert alert-warning">
+          <strong>Careful!</strong> You are browsing documentation for an outdated version of Flipper. Go <a href="/docs/latest">here</a> to browse the documentation for the latest version.
+        </div>
+        {% endif %}
+
+      {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

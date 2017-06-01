@@ -54,7 +54,7 @@ device.
 ### Modules Bindings
 
 All of the functions exposed to interact with Flipper hardware are done so
-through the [standard modules](../modules/). Standard modules come pre-installed
+through the [standard modules](../modules). Standard modules come pre-installed
 on Flipper hardware and can be used to change the state of the various
 peripherals on the device. A complete language binding will provide a means
 native to the language of interacting with the standard modules.
