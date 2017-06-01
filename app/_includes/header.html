@@ -1,39 +1,34 @@
-{% if page.header_icon and page.header_title %}
-  <header class="page-header">
-    <div class="container">
-      {% if page.header_icon %}
-        <div class="page-header-icon">
-          <img src="{{ page.header_icon }}" alt="" />
-        </div>
-      {% endif %}
-
-      <div class="page-header-title">
-        {% if page.breadcrumbs %}
-          <ul class="breadcrumbs">
-            {% for breadcrumb in page.breadcrumbs %}
-              <li class="breadcrumb-item{% if page.url == breadcrumb[1] %} active{% endif %}"><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
-        <h1>{{ page.header_title }}</h1>
-
-        {% if page.header_caption or include.header_caption%}
-          <p>{{ page.header_caption }}{{ include.header_caption }}</p>
-        {% endif %}
-      </div>
-
-      {% if page.header_btn_text %}
-        <div class="page-header-right">
-          <a class="page-header-btn" href="{{ page.header_btn_href | liquify }}" target="{{ page.header_btn_target }}">{{ page.header_btn_text | liquify }}</a>
-        </div>
-      {% endif %}
-
-      {% if page.header_html %}
-        <div class="page-header-right">
-          {{ page.header_html }}
-        </div>
-      {% endif %}
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-icon">
+      <img src="/assets/images/icons/icn-documentation.svg" alt="Documentation" />
     </div>
-  </header>
-{% endif %}
+    <div class="page-header-title">
+      <h1>Documentation ({{page.flipper_version}})</h1>
+    </div>
+
+    {% if site.data.flipper_versions.size > 1 %}
+    <div class="dropdown page-header-right">
+      <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Version {{page.flipper_version}}
+        {% if page.flipper_version == site.data.flipper_latest.release %}<em>(latest)</em>{% endif %}
+        <span class="caret"></span>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="version-dropdown">
+        {% for ver in site.data.flipper_versions %}
+        {% unless page.flipper_version == ver.release %}
+        <li>
+          <a href="/{{ver.release}}"{% if ver.release == page.flipper_version %} class="active"{% endif %}>
+            {{ver.release}}
+            {% if ver.release == site.data.flipper_latest.release %}(latest){% endif %}
+          </a>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</header>
+
