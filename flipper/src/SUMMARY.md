@@ -1,7 +1,6 @@
 # Summary
 
 - [Introduction](./introduction.md)
-- [Introduction (old)](./introduction-old.md)
 - [Getting Started](./getting-started.md)
 - [Hardware](./hardware.md)
 - [Modules](./modules.md)
